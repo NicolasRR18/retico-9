@@ -84,3 +84,74 @@ if __name__ == "__main__":
         
 
 ```
+============================================================
+
+# Punto-3
+
+![image](https://github.com/user-attachments/assets/00461bb6-a3bb-4668-baa5-800535424922)
+
+```
+
+def añadir_numeros(*args) -> list:
+    numeros_1 = [] 
+    numeros_2 = []
+    while True:
+        n = float(input("Ingrese numeros. (para terminar ingrese (-1))"))
+        if n == -1:
+            break
+        elif n == 0:
+            numeros_2.append(n)
+        else:
+            numeros_1.append(n)
+    return numeros_1 + numeros_2
+
+if __name__ == "__main__":
+    añadir_1 = añadir_numeros()
+    print(añadir_1)
+        
+
+```
+
+============================================================
+
+# Punto-4
+
+Bubble Sort es un algoritmo de ordenamiento básico pero no muy eficiente. Se basa en comparar pares de elementos adyacentes e ir intercambiándolos si están en el orden incorrecto. Este proceso se repite varias veces hasta que la lista esté completamente ordenada.
+
+¿Cómo funciona?
+Se comparan los dos primeros elementos de la lista.
+Si el primero es mayor que el segundo, se intercambian.
+Luego se pasa al siguiente par y se repite el proceso.
+Cuando se llega al final, el elemento más grande ya está en su posición correcta (como si “flotara” al final, de ahí el nombre Bubble Sort).
+Se repite todo el proceso, ignorando el último elemento ya ordenado, hasta que no haya más intercambios.
+Ejemplo paso a paso:
+Supongamos que tenemos la lista [5, 3, 8, 4, 2].
+
+(5 y 3) → [3, 5, 8, 4, 2]
+(5 y 8) → No se cambia
+(8 y 4) → [3, 5, 4, 8, 2]
+(8 y 2) → [3, 5, 4, 2, 8] (el 8 ya quedó en su lugar)
+Se repite el proceso hasta que la lista quede ordenada: [2, 3, 4, 5, 8]
+
+Complejidad del algoritmo
+Peor caso y caso promedio: 
+𝑂
+(
+𝑛
+2
+)
+O(n 
+2
+ ) (cuando la lista está invertida o desordenada)
+Mejor caso: 
+𝑂
+(
+𝑛
+)
+O(n) (cuando la lista ya está ordenada, y solo hacemos una pasada)
+En terminos de eficiencia se queda un poco atras puesto que para listas grandes, hay mejores algoritmos como Merge Sort o Quick Sort. Sin embargo, es fácil de entender y bueno para aprender sobre ordenamiento.
+
+============================================================
+# REFERENCIAS
+-https://www.geeksforgeeks.org/bubble-sort-algorithm/
+-https://www.cuemath.com/algebra/dot-product/
